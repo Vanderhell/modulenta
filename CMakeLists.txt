@@ -8,14 +8,13 @@ target_compile_features(modulenta PUBLIC c_std_99)
 if(MODULENTA_BUILD_TESTS)
  enable_testing()
  set(MODULENTA_TESTS
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_discrepancy.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_frame_delta.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_microframe_delta.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_nearest.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_binary_majority3x3_u32.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_opt_argmax_small_i32.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_opt_argmin_small_i32.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rom.c)
+  # The preserved discrepancy, USB frame and 1-Wire ROM tests belong to
+  # source families that are not included in this standalone product.
+  )
  foreach(test_source IN LISTS MODULENTA_TESTS)
   get_filename_component(test_name "${test_source}" NAME_WE)
   add_executable(modulenta_${test_name} ${test_source})
