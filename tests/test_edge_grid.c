@@ -1,0 +1,3 @@
+#include <stdint.h>
+#include "pc_sensor_fault_isolate3_i32.h"
+int main(void){static const int32_t v[]={INT32_MIN,INT32_MIN+1,-1,0,1,INT32_MAX-1,INT32_MAX};static const uint32_t t[]={0,1,2,2147483647u,2147483648u,UINT32_MAX};uint8_t ix;unsigned i,j,k,n;for(i=0;i<7;i++)for(j=0;j<7;j++)for(k=0;k<7;k++)for(n=0;n<6;n++){int32_t a=v[i],b=v[j],c=v[k];unsigned d01=(uint32_t)(a>=b?(uint32_t)a-(uint32_t)b:(uint32_t)b-(uint32_t)a)<=t[n];unsigned d02=(uint32_t)(a>=c?(uint32_t)a-(uint32_t)c:(uint32_t)c-(uint32_t)a)<=t[n];unsigned d12=(uint32_t)(b>=c?(uint32_t)b-(uint32_t)c:(uint32_t)c-(uint32_t)b)<=t[n];ix=99;int ok=pc_sensor_fault_isolate3_i32(a,b,c,t[n],&ix);if(ok!=(d01+d02+d12==1u))return 1;if(ok&&ix!=(d01?2u:(d02?1u:0u)))return 2;if(!ok&&ix!=99)return 3;}return 0;}

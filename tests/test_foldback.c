@@ -1,0 +1,6 @@
+#include <stdint.h>
+#include <stdio.h>
+#include <limits.h>
+#include "../include/foldback_clip_i32.h"
+static int check(int32_t x,int32_t l){int32_t y;if(!pc_foldback_clip_i32_experiment(x,l,&y)||y< -l||y>l)return 1;if(x!=INT32_MIN){int32_t z;if(!pc_foldback_clip_i32_experiment(-x,l,&z)||z!=-y)return 2;}int64_t p=4*(int64_t)l;if((int64_t)x+p<=INT32_MAX){int32_t z;if(!pc_foldback_clip_i32_experiment((int32_t)((int64_t)x+p),l,&z)||z!=y)return 3;}return 0;}
+int main(void){unsigned long long n=0;for(int32_t l=1;l<=64;l++)for(int32_t x=-32768;x<=32767;x++){if(check(x,l))return 1;n++;}const int32_t e[]={INT32_MIN,INT32_MIN+1,-1,0,1,INT32_MAX-1,INT32_MAX};const int32_t lim[]={1,2,10,INT32_MAX};for(unsigned j=0;j<4;j++)for(unsigned i=0;i<7;i++){if(check(e[i],lim[j]))return 2;n++;}for(int32_t l=1;l<=100;l++){int32_t o;if(!pc_foldback_clip_i32_experiment(l,l,&o)||o!=l)return 3;if(!pc_foldback_clip_i32_experiment(l+1,l,&o)||o!=l-1)return 4;if(!pc_foldback_clip_i32_experiment(2*l,l,&o)||o!=0)return 5;if(!pc_foldback_clip_i32_experiment(3*l,l,&o)||o!=-l)return 6;}int32_t untouched=77;if(pc_foldback_clip_i32_experiment(1,0,&untouched)||untouched!=77)return 7;if(pc_foldback_clip_i32_experiment(1,1,NULL))return 8;printf("PASS %llu exhaustive/boundary properties and explicit wave landmarks\n",n);return 0;}

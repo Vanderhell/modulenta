@@ -1,0 +1,8 @@
+#include <stdint.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <limits.h>
+#include "../include/select_k.h"
+static uint32_t s=0x975131a7u;static uint32_t next(void){s^=s<<13;s^=s>>17;s^=s<<5;return s;}
+static void sort(int32_t*v,size_t n){for(size_t i=1;i<n;i++){int32_t x=v[i];size_t j=i;while(j&&v[j-1]>x){v[j]=v[j-1];j--;}v[j]=x;}}
+int main(void){const int32_t sm[]={-2,-1,0,1};size_t cases=0;for(size_t n=1;n<=7;n++){size_t lim=1;for(size_t i=0;i<n;i++)lim*=4;for(size_t code=0;code<lim;code++){size_t z=code;int32_t v[8],q[8];for(size_t i=0;i<n;i++)v[i]=q[i]=sm[z%4],z/=4;sort(q,n);for(size_t k=0;k<n;k++){int32_t out=99;if(!pc_select_k_small_i32_experiment(v,n,k,&out)||out!=q[k])return 1;cases++;}}}const int32_t ed[]={INT32_MIN,INT32_MIN+1,-1,0,1,INT32_MAX-1,INT32_MAX};for(unsigned a=0;a<7;a++)for(unsigned b=0;b<7;b++)for(unsigned c=0;c<7;c++)for(unsigned d=0;d<7;d++){int32_t v[]={ed[a],ed[b],ed[c],ed[d]},q[]={ed[a],ed[b],ed[c],ed[d]};sort(q,4);for(size_t k=0;k<4;k++){int32_t o;if(!pc_select_k_small_i32_experiment(v,4,k,&o)||o!=q[k])return 2;}}for(unsigned t=0;t<100000;t++){size_t n=1+next()%8;int32_t v[8],q[8];for(size_t i=0;i<n;i++)v[i]=q[i]=(int32_t)next();sort(q,n);size_t k=next()%n;int32_t o;if(!pc_select_k_small_i32_experiment(v,n,k,&o)||o!=q[k])return 3;}int32_t v[]={1,2},o=55;if(pc_select_k_small_i32_experiment(NULL,2,0,&o)||o!=55)return 4;if(pc_select_k_small_i32_experiment(v,0,0,&o)||o!=55)return 5;if(pc_select_k_small_i32_experiment(v,2,2,&o)||o!=55)return 6;int32_t alias[]={9,1,5};if(!pc_select_k_small_i32_experiment(alias,3,1,&alias[0])||alias[0]!=5)return 7;printf("PASS: %lu exhaustive rank queries + 2401 boundary arrays + 100000 seeded + invalid transaction\n",(unsigned long)cases);return 0;}

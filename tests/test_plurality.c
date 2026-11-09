@@ -1,0 +1,9 @@
+#include <stdint.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <limits.h>
+#include "../include/plurality.h"
+static uint32_t s=0x61d2a9f7u;
+static uint32_t next(void){s^=s<<13;s^=s>>17;s^=s<<5;return s;}
+static int check(const uint32_t *v,size_t n){uint32_t q[8],expected=0,got=0;size_t expected_n=0,got_n=0;for(size_t i=0;i<n;i++)q[i]=v[i];for(size_t i=1;i<n;i++){uint32_t x=q[i];size_t j=i;while(j&&q[j-1]>x){q[j]=q[j-1];j--;}q[j]=x;}for(size_t i=0;i<n;){size_t j=i+1;while(j<n&&q[j]==q[i])j++;if(j-i>expected_n){expected=q[i];expected_n=j-i;}i=j;}for(size_t i=0;i<n;i++){size_t c=0;for(size_t j=0;j<n;j++)if(v[i]==v[j])c++;if(c==expected_n){expected=v[i];break;}}return !pc_vote_plurality_u32_experiment(v,n,&got,&got_n)||got!=expected||got_n!=expected_n;}
+int main(void){const uint32_t sm[]={0,1,2};for(size_t n=1;n<=7;n++){size_t lim=1;for(size_t i=0;i<n;i++)lim*=3;for(size_t z=0;z<lim;z++){size_t q=z;uint32_t v[8];for(size_t i=0;i<n;i++){v[i]=sm[q%3];q/=3;}if(check(v,n))return 1;}}const uint32_t ed[]={0,1,UINT32_MAX};for(unsigned a=0;a<3;a++)for(unsigned b=0;b<3;b++)for(unsigned c=0;c<3;c++)for(unsigned d=0;d<3;d++){uint32_t v[]={ed[a],ed[b],ed[c],ed[d]};if(check(v,4))return 2;}for(unsigned t=0;t<100000;t++){size_t n=1+next()%8;uint32_t v[8];for(size_t i=0;i<n;i++)v[i]=next()%5==0?UINT32_MAX:next()%4;if(check(v,n))return 3;}uint32_t w=77,v[]={1};size_t c=88;if(pc_vote_plurality_u32_experiment(NULL,1,&w,&c)||w!=77||c!=88)return 4;if(pc_vote_plurality_u32_experiment(v,0,&w,&c)||w!=77||c!=88)return 5;if(pc_vote_plurality_u32_experiment(v,1,NULL,&c)||pc_vote_plurality_u32_experiment(v,1,&w,NULL))return 6;puts("PASS: 3279 exhaustive + 81 boundary + 100000 seeded + invalids");return 0;}

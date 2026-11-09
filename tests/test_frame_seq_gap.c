@@ -1,0 +1,7 @@
+#include <assert.h>
+#include <stddef.h>
+#include <stdint.h>
+#include "frame_seq_gap.h"
+static bool oracle(uint32_t previous,uint32_t received,uint32_t *missing){int64_t d=(int64_t)received-(int64_t)previous;if(d<0)d+=INT64_C(4294967296);if(missing==NULL||d==0||d>=INT64_C(2147483648))return false;*missing=(uint32_t)(d-1);return true;}
+static uint32_t state=0x243F6A88u;static uint32_t next(void){state^=state<<13;state^=state>>17;state^=state<<5;return state;}
+int main(void){for(uint32_t d=0;d<=8;++d){uint32_t q=77;bool ok=pc_frame_seq_gap_experiment(0,d,&q);assert(ok==(d!=0));if(ok)assert(q==d-1u);} {const uint32_t ds[]={UINT32_C(0x7fffffff),UINT32_C(0x80000000),UINT32_C(0x80000001),UINT32_MAX};for(unsigned i=0;i<4;++i){uint32_t q=77;bool ok=pc_frame_seq_gap_experiment(0,ds[i],&q);assert(ok==(ds[i]<UINT32_C(0x80000000)));if(ok)assert(q==ds[i]-1u);else assert(q==77);}}{uint32_t q=77;assert(pc_frame_seq_gap_experiment(UINT32_MAX,0,&q)&&q==0);assert(pc_frame_seq_gap_experiment(UINT32_MAX-1u,1,&q)&&q==2);assert(!pc_frame_seq_gap_experiment(10,10,&q)&&q==2);assert(!pc_frame_seq_gap_experiment(1,0,&q)&&q==2);assert(!pc_frame_seq_gap_experiment(0,1,NULL));}for(unsigned i=0;i<1000000u;++i){uint32_t a=next(),b=next(),x=77,y=77;bool p=pc_frame_seq_gap_experiment(a,b,&x),r=oracle(a,b,&y);assert(p==r);if(p)assert(x==y);else assert(x==77);}return 0;}

@@ -1,0 +1,6 @@
+#include "../include/pc_dma_descriptor_span_u32.h"
+#include <stdint.h>
+#include <stddef.h>
+static uint32_t state=UINT32_C(0x2309C0DE);static uint32_t next(void){state^=state<<13;state^=state>>17;state^=state<<5;return state;}
+static int check(uint32_t total,uint32_t max,uint32_t index){uint64_t count,offset,len;uint32_t a=UINT32_C(0xA55AA55A),b=UINT32_C(0x5AA55AA5);int valid=total!=0&&max!=0;count=valid?((uint64_t)total+max-1u)/max:0;valid=valid&&(uint64_t)index<count;int got=pc_dma_descriptor_span_u32(total,max,index,&a,&b);if(got!=valid)return 1;if(!valid)return a==UINT32_C(0xA55AA55A)&&b==UINT32_C(0x5AA55AA5)?0:2;offset=(uint64_t)index*max;len=(uint64_t)total-offset;if(len>max)len=max;if(a!=offset||b!=len||offset+len>total)return 3;return 0;}
+int main(void){uint32_t t,m,i,n=0;static const uint32_t edge[]={0u,1u,2u,UINT32_MAX-1u,UINT32_MAX};for(t=0;t<16;t++)for(m=0;m<16;m++)for(i=0;i<16;i++){if(check(t,m,i))return 1;++n;}for(t=0;t<125;t++){if(check(edge[t%5],edge[(t/5)%5],edge[(t/25)%5]))return 2;++n;}for(t=0;t<1000000;t++){uint32_t x=next(),y=next(),z=next();if(check(x,y,z))return 3;++n;}if(n!=UINT32_C(1004221))return 4;{uint32_t a=7,b=9;if(pc_dma_descriptor_span_u32(8,4,2,&a,&b)||a!=7||b!=9)return 5;if(pc_dma_descriptor_span_u32(8,4,0,&a,&a)||a!=7)return 6;if(pc_dma_descriptor_span_u32(8,4,0,NULL,&b)||b!=9)return 7;}return 0;}
