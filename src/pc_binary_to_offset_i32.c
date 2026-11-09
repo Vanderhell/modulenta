@@ -1,7 +1,7 @@
 #include "pc_binary_to_offset_i32.h"
 #include <stddef.h>
 
-bool rm_binary_to_offset_i32(int32_t binary, uint32_t offset, uint32_t *code)
+bool pc_binary_to_offset_i32(int32_t binary, uint32_t offset, uint32_t *code)
 {
     if (code == NULL) {
         return false;

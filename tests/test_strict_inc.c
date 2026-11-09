@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include "../include/strict_inc_i32.h"
-#include "../../../../include/roundmath/pc_is_strict_inc_i32.h"
+/* Held-out cross-family validation source; dependency is outside this product. */
 
 static int reference(const int32_t *a, size_t n)
 {

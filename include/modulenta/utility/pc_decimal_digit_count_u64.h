@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_DECIMAL_DIGIT_COUNT_U64_H
-#define PRIMITIVECORE_DECIMAL_DIGIT_COUNT_U64_H
+#ifndef PC_DECIMAL_DIGIT_COUNT_U64_H
+#define PC_DECIMAL_DIGIT_COUNT_U64_H
 #include <stdint.h>
 
 /* Return the number of base-10 digits; zero has one digit. */

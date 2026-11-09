@@ -1,8 +1,8 @@
 #include "pc_monotonic_search_i32.h"
 #include <stddef.h>
 
-bool rm_monotonic_search_i32(int32_t lo, int32_t hi,
-                             rm_monotonic_predicate_i32 predicate,
+bool pc_monotonic_search_i32(int32_t lo, int32_t hi,
+                             pc_monotonic_predicate_i32 predicate,
                              void *context, bool *found, int32_t *first_true)
 {
     int64_t left, right;

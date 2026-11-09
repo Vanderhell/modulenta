@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_SORT6_I32_H
-#define PRIMITIVECORE_SORT6_I32_H
+#ifndef PC_SORT6_I32_H
+#define PC_SORT6_I32_H
 #include <stdbool.h>
 #include <stdint.h>
 /* Sort six caller-owned int32 values into nondecreasing order. */

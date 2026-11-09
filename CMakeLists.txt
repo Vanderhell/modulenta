@@ -12,9 +12,9 @@ if(MODULENTA_BUILD_TESTS)
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_frame_delta.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_microframe_delta.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_nearest.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rm_binary_majority3x3_u32.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rm_opt_argmax_small_i32.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rm_opt_argmin_small_i32.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_binary_majority3x3_u32.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_opt_argmax_small_i32.c
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_opt_argmin_small_i32.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rom.c)
  foreach(test_source IN LISTS MODULENTA_TESTS)
   get_filename_component(test_name "${test_source}" NAME_WE)

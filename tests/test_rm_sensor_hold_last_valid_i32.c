@@ -14,27 +14,27 @@ int main(void)
     bool have_expected = false;
 
     assert(pc_sensor_hold_last_valid_i32(&state, false, 7, &output) ==
-           RM_SENSOR_HOLD_NO_VALUE);
+           PC_SENSOR_HOLD_NO_VALUE);
     assert(output == 123 && !state.has_value);
     assert(pc_sensor_hold_last_valid_i32(&state, true, INT32_MIN, &output) ==
-           RM_SENSOR_HOLD_VALUE);
+           PC_SENSOR_HOLD_VALUE);
     assert(output == INT32_MIN && state.last_value == INT32_MIN);
     assert(pc_sensor_hold_last_valid_i32(&state, false, INT32_MAX, &output) ==
-           RM_SENSOR_HOLD_VALUE);
+           PC_SENSOR_HOLD_VALUE);
     assert(output == INT32_MIN && state.last_value == INT32_MIN);
     assert(pc_sensor_hold_last_valid_i32(&state, true, INT32_MAX, &output) ==
-           RM_SENSOR_HOLD_VALUE);
+           PC_SENSOR_HOLD_VALUE);
     assert(output == INT32_MAX && state.last_value == INT32_MAX);
 
     {
         const pc_sensor_hold_last_valid_i32_state before = state;
         output = 456;
         assert(pc_sensor_hold_last_valid_i32(0, true, 9, &output) ==
-               RM_SENSOR_HOLD_ERROR);
+               PC_SENSOR_HOLD_ERROR);
         assert(output == 456 && state.last_value == before.last_value &&
                state.has_value == before.has_value);
         assert(pc_sensor_hold_last_valid_i32(&state, true, 9, 0) ==
-               RM_SENSOR_HOLD_ERROR);
+               PC_SENSOR_HOLD_ERROR);
         assert(state.last_value == before.last_value && state.has_value == before.has_value);
     }
 
@@ -54,10 +54,10 @@ int main(void)
             have_expected = true;
         }
         if (have_expected) {
-            assert(result == RM_SENSOR_HOLD_VALUE);
+            assert(result == PC_SENSOR_HOLD_VALUE);
             assert(output == expected && state.last_value == expected);
         } else {
-            assert(result == RM_SENSOR_HOLD_NO_VALUE);
+            assert(result == PC_SENSOR_HOLD_NO_VALUE);
             assert(output == 789 && !state.has_value);
         }
     }

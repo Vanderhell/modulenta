@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_BINARY_WIDTH_U32_H
-#define PRIMITIVECORE_BINARY_WIDTH_U32_H
+#ifndef PC_BINARY_WIDTH_U32_H
+#define PC_BINARY_WIDTH_U32_H
 #include <stdint.h>
 
 /* Return the number of significant binary digits; zero has width zero. */

@@ -1,7 +1,7 @@
 #include "pc_accumulate_product_i32.h"
 #include <stddef.h>
 
-bool rm_accumulate_product_i32(int32_t a, int32_t b, int64_t *accumulator)
+bool pc_accumulate_product_i32(int32_t a, int32_t b, int64_t *accumulator)
 {
     int64_t product, sum;
     if (accumulator == NULL) return false;

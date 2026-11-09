@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_SIGNED_WIDTH_I32_H
-#define PRIMITIVECORE_SIGNED_WIDTH_I32_H
+#ifndef PC_SIGNED_WIDTH_I32_H
+#define PC_SIGNED_WIDTH_I32_H
 #include <stdint.h>
 
 /* Minimum two's-complement bit count including sign; zero requires one bit. */

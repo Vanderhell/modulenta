@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_PC_BINARY_MAJORITY3X3_U32_H
-#define PRIMITIVECORE_PC_BINARY_MAJORITY3X3_U32_H
+#ifndef PC_PC_BINARY_MAJORITY3X3_U32_H
+#define PC_PC_BINARY_MAJORITY3X3_U32_H
 #include <stdbool.h>
 #include <stdint.h>
 /* Low 9 bits encode a complete 3x3 neighborhood, row-major; output is 0/1.

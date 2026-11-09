@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_PC_BSWAP64_U64_H
-#define PRIMITIVECORE_PC_BSWAP64_U64_H
+#ifndef PC_PC_BSWAP64_U64_H
+#define PC_PC_BSWAP64_U64_H
 #include <stdint.h>
 
 /* Reverse the eight byte positions in a uint64 value. */

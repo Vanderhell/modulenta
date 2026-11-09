@@ -1,6 +1,6 @@
 #include "pc_table_validate_sorted_i32.h"
 
-bool rm_table_validate_sorted_i32(const int32_t *values, size_t count)
+bool pc_table_validate_sorted_i32(const int32_t *values, size_t count)
 {
     size_t i;
     if (values == NULL) return count == 0u;

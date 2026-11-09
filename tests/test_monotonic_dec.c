@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include "../include/monotonic_dec_i32.h"
-#include "../../../../include/roundmath/pc_is_monotonic_dec_i32.h"
+/* Held-out cross-family validation source; dependency is outside this product. */
 static int reference(const int32_t*a,size_t n){if(a==NULL)return n==0u;for(size_t i=1;i<n;i++)if(a[i-1]<a[i])return 0;return 1;}
 static int matches(const int32_t *a,size_t n){int expected=reference(a,n);return (int)pc_is_monotonic_dec_i32_experiment(a,n)==expected&&(int)pc_is_monotonic_dec_i32(a,n)==expected;}
 static uint32_t state=UINT32_C(0x1102a55a);

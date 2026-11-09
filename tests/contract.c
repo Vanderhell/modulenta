@@ -1,4 +1,4 @@
-#include "roundmath/pc_clock_ppm_compensate_u32.h"
+/* Held-out cross-family validation source; dependency is outside this product. */
 #include <stdint.h>
 #include <stdio.h>
 #define CHECK(x) do { if (!(x)) { fprintf(stderr,"fail %d\n",__LINE__); return 1; } } while (0)

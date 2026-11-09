@@ -1,4 +1,4 @@
-#include "roundmath/sorted_gap_max_i32.h"
+/* Held-out cross-family validation source; dependency is outside this product. */
 #include <assert.h>
 #include <limits.h>
 #include <stdint.h>

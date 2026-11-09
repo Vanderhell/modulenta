@@ -1,5 +1,5 @@
-#ifndef PRIMITIVECORE_PC_BINARY_RUN_HORIZONTAL_U32_H
-#define PRIMITIVECORE_PC_BINARY_RUN_HORIZONTAL_U32_H
+#ifndef PC_PC_BINARY_RUN_HORIZONTAL_U32_H
+#define PC_PC_BINARY_RUN_HORIZONTAL_U32_H
 #include <stdbool.h>
 #include <stdint.h>
 /* Count consecutive nonzero row samples from start_x to the first zero or width.

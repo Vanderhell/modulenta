@@ -4,7 +4,7 @@ Modulenta is a standalone C99 embedded utility library for bounded indexing, rep
 
 ## Scope
 
-This first extraction contains 253 family headers, 44 implementation units and 106 migrated test sources. It is portable C99, uses no mandatory heap or operating-system service, and keeps caller-owned state explicit where applicable.
+The package contains 253 public headers and 44 implementation units. It is portable C99, uses no mandatory heap or operating-system service, and keeps caller-owned state explicit where applicable.
 
 ## Build and test
 
@@ -21,7 +21,7 @@ Host validation is run during extraction. ESP32-S3 validation and isolated footp
 ## Name and origin
 
 Modulenta combines modulus (bounded relation) with lenta (measured, deliberate operation), reflecting small predictable utility transformations.
-It originates from PrimitiveCore's utility/general_helpers family.
+Its technical scope is bounded utility and representation helpers.
 
 ## License
 

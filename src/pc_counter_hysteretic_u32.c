@@ -1,7 +1,7 @@
 #include "pc_counter_hysteretic_u32.h"
 #include <stddef.h>
-bool rm_counter_hysteretic_u32(bool sample, uint32_t lower, uint32_t upper,
-                               rm_counter_hysteretic_state *state)
+bool pc_counter_hysteretic_u32(bool sample, uint32_t lower, uint32_t upper,
+                               pc_counter_hysteretic_state *state)
 {
     uint32_t count;
     bool active;

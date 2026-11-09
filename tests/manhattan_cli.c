@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    int32_t sample[RM_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION];
-    int32_t centers[RM_CLASSIFY_MANHATTAN_SMALL_MAX_CLASSES *
-                    RM_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION];
+    int32_t sample[PC_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION];
+    int32_t centers[PC_CLASSIFY_MANHATTAN_SMALL_MAX_CLASSES *
+                    PC_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION];
     uint8_t center_count;
     uint8_t dimension;
     uint8_t class_index;
@@ -25,9 +25,9 @@ int main(void)
         center_count = (uint8_t)class_value;
         dimension = (uint8_t)dimension_value;
         if (center_count == 0u ||
-            center_count > RM_CLASSIFY_MANHATTAN_SMALL_MAX_CLASSES ||
+            center_count > PC_CLASSIFY_MANHATTAN_SMALL_MAX_CLASSES ||
             dimension == 0u ||
-            dimension > RM_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION) return 3;
+            dimension > PC_CLASSIFY_MANHATTAN_SMALL_MAX_DIMENSION) return 3;
         for (feature = 0u; feature < dimension; ++feature) {
             if (scanf("%" SCNd32, &sample[feature]) != 1) return 4;
         }

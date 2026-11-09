@@ -7,9 +7,9 @@ static uint32_t mix32(uint32_t value)
     return value ^ (value >> 15u);
 }
 
-rm_splitmix32_step_result rm_splitmix32_step(uint32_t state)
+pc_splitmix32_step_result pc_splitmix32_step(uint32_t state)
 {
     state += UINT32_C(0x9E3779B9);
-    const rm_splitmix32_step_result result = {state, mix32(state)};
+    const pc_splitmix32_step_result result = {state, mix32(state)};
     return result;
 }

@@ -1,6 +1,6 @@
 #include "pc_lcg_jump_u32.h"
 
-uint32_t rm_lcg_jump_u32(uint32_t state, uint32_t multiplier, uint32_t increment, uint32_t steps)
+uint32_t pc_lcg_jump_u32(uint32_t state, uint32_t multiplier, uint32_t increment, uint32_t steps)
 {
     uint32_t accumulated_multiplier = 1u;
     uint32_t accumulated_increment = 0u;

@@ -1,7 +1,7 @@
 #include "pc_accumulate_square_i32.h"
 #include <stddef.h>
 
-bool rm_accumulate_square_i32(int32_t value, uint64_t *accumulator)
+bool pc_accumulate_square_i32(int32_t value, uint64_t *accumulator)
 {
     int64_t widened;
     uint64_t magnitude, square;

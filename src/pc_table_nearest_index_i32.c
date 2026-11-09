@@ -6,7 +6,7 @@ static uint32_t distance_i32(int32_t a, int32_t b)
                   : (uint32_t)b - (uint32_t)a;
 }
 
-bool rm_table_nearest_index_i32(const int32_t *values, size_t count,
+bool pc_table_nearest_index_i32(const int32_t *values, size_t count,
                                 int32_t query, size_t *index)
 {
     size_t i, best_index;
