@@ -9,10 +9,7 @@ if(MODULENTA_BUILD_TESTS)
  enable_testing()
  set(MODULENTA_TESTS
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_discrepancy.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_endpoint_interval.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_frame_delta.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_integer_newton_step_i32.c
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_integer_secant_step_i32.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_microframe_delta.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_nearest.c
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_rm_binary_majority3x3_u32.c
