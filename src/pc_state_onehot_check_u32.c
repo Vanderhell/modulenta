@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_state_onehot_check_u32.h>
+#include "pc_state_onehot_check_u32.h"
 
 bool rm_state_onehot_check_u32(uint32_t value)
 {

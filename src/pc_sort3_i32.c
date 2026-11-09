@@ -1,4 +1,4 @@
-#include "primitivecore/utility/ordering/pc_sort3_i32.h"
+#include "pc_sort3_i32.h"
 #include <stddef.h>
 
 static void compare_swap(int32_t *a, int32_t *b)

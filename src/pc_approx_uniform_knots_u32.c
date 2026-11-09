@@ -1,4 +1,4 @@
-#include "primitivecore/utility/optimization/pc_approx_uniform_knots_u32.h"
+#include "pc_approx_uniform_knots_u32.h"
 
 #include <stddef.h>
 

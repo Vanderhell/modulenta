@@ -1,4 +1,4 @@
-#include "primitivecore/arithmetic/bounded/integer/pc_signed_width_i32.h"
+#include "pc_signed_width_i32.h"
 
 uint8_t pc_signed_width_i32(int32_t value)
 {

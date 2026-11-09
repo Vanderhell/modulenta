@@ -17,4 +17,3 @@ bool rm_arithmetic_sequence_sum_i32(int32_t start, int32_t step, uint32_t count,
 #ifndef PC_ARITHMETIC_SEQUENCE_SUM_I32_H
 #define PC_ARITHMETIC_SEQUENCE_SUM_I32_H RM_ARITHMETIC_SEQUENCE_SUM_I32_H
 #endif
-

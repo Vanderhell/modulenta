@@ -1,4 +1,4 @@
-#include "primitivecore/signal/measurements/bounded/pc_binary_width_u32.h"
+#include "pc_binary_width_u32.h"
 
 uint8_t pc_binary_width_u32(uint32_t value)
 {

@@ -1,5 +1,5 @@
-#include "../include/pc_table_nearest_index_i32.h"
-#include "../../../../include/roundmath/pc_nearest_sorted_i32.h"
+#include "pc_table_nearest_index_i32.h"
+#include "pc_nearest_sorted_i32.h"
 #include <assert.h>
 #include <limits.h>
 #include <stdint.h>

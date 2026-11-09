@@ -1,4 +1,4 @@
-#include "primitivecore/arithmetic/bounded/integer/pc_midpoint_u64_safe.h"
+#include "pc_midpoint_u64_safe.h"
 
 uint64_t pc_midpoint_u64_safe(uint64_t a, uint64_t b)
 {

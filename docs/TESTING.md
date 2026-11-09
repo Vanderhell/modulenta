@@ -1,3 +1,3 @@
 # Testing
 
-Migrated family tests: 106. Host and hardware results must be recorded from actual runs. Current hardware status: HW NOT VERIFIED.
+Migrated family test sources: 106. The independent MSVC gate selects 11 self-contained tests; remaining historical sources reference primitives outside this utility boundary and remain preserved for follow-up extraction. Current hardware status: HW NOT VERIFIED.

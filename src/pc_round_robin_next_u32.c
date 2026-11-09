@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_round_robin_next_u32.h>
+#include "pc_round_robin_next_u32.h"
 #include <stddef.h>
 
 bool rm_round_robin_next_u32(uint32_t current, uint32_t count,

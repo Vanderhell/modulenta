@@ -1,4 +1,4 @@
-#include "../include/pc_opt_argmax_small_i32.h"
+#include "pc_opt_argmax_small_i32.h"
 #include <assert.h>
 #include <limits.h>
 #include <stddef.h>

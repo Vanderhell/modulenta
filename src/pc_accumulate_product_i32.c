@@ -1,4 +1,4 @@
-#include <primitivecore/arithmetic/integer/bounded/pc_accumulate_product_i32.h>
+#include "pc_accumulate_product_i32.h"
 #include <stddef.h>
 
 bool rm_accumulate_product_i32(int32_t a, int32_t b, int64_t *accumulator)
@@ -12,4 +12,3 @@ bool rm_accumulate_product_i32(int32_t a, int32_t b, int64_t *accumulator)
     *accumulator = sum + product;
     return true;
 }
-

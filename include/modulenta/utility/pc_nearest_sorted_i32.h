@@ -20,4 +20,3 @@ bool rm_nearest_sorted_i32(const int32_t *sorted, size_t count, int32_t value,
 #ifndef PC_PRIMITIVECORE_RM_NEAREST_SORTED_I32_H
 #define PC_PRIMITIVECORE_RM_NEAREST_SORTED_I32_H PRIMITIVECORE_RM_NEAREST_SORTED_I32_H
 #endif
-

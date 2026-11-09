@@ -24,4 +24,3 @@ bool rm_monotonic_search_i32(int32_t lo, int32_t hi,
 #ifndef PC_MONOTONIC_SEARCH_I32_H
 #define PC_MONOTONIC_SEARCH_I32_H RM_MONOTONIC_SEARCH_I32_H
 #endif
-

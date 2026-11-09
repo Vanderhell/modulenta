@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_monotonic_search_i32.h>
+#include "pc_monotonic_search_i32.h"
 #include <stddef.h>
 
 bool rm_monotonic_search_i32(int32_t lo, int32_t hi,

@@ -17,4 +17,3 @@ bool rm_token_bucket_refill_u32(uint32_t tokens, uint32_t elapsed_ticks,
 #ifndef PC_TOKEN_BUCKET_REFILL_U32_H
 #define PC_TOKEN_BUCKET_REFILL_U32_H RM_TOKEN_BUCKET_REFILL_U32_H
 #endif
-

@@ -1,4 +1,4 @@
-#include "primitivecore/utility/ordering/pc_sort6_i32.h"
+#include "pc_sort6_i32.h"
 #include <stddef.h>
 
 bool pc_sort6_i32(int32_t values[6])

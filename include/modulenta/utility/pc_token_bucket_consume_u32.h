@@ -16,4 +16,3 @@ bool rm_token_bucket_consume_u32(uint32_t tokens, uint32_t requested,
 #ifndef PC_TOKEN_BUCKET_CONSUME_U32_H
 #define PC_TOKEN_BUCKET_CONSUME_U32_H RM_TOKEN_BUCKET_CONSUME_U32_H
 #endif
-

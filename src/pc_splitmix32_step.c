@@ -1,4 +1,4 @@
-#include <primitivecore/arithmetic/ranges/bounded/pc_splitmix32_step.h>
+#include "pc_splitmix32_step.h"
 
 static uint32_t mix32(uint32_t value)
 {

@@ -22,4 +22,3 @@ bool rm_table_nearest_index_i32(const int32_t *values, size_t count,
 #ifndef PC_TABLE_NEAREST_INDEX_I32_H
 #define PC_TABLE_NEAREST_INDEX_I32_H RM_TABLE_NEAREST_INDEX_I32_H
 #endif
-

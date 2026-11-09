@@ -1,4 +1,4 @@
-#include "primitivecore/utility/optimization/bounded/pc_opt_argmax_small_i32.h"
+#include "pc_opt_argmax_small_i32.h"
 
 bool pc_opt_argmax_small_i32(const int32_t *values, uint8_t count,
                              uint8_t *index)

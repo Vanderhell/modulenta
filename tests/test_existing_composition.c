@@ -1,5 +1,5 @@
 #include "pc_classify_nearest3_i32.h"
-#include "roundmath/pc_nearest_sorted_i32.h"
+#include "pc_nearest_sorted_i32.h"
 
 #include <stddef.h>
 #include <stdint.h>

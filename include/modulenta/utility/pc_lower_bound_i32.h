@@ -19,4 +19,3 @@ bool rm_lower_bound_i32(const int32_t *sorted, size_t count, int32_t value,
 #ifndef PC_PRIMITIVECORE_RM_LOWER_BOUND_I32_H
 #define PC_PRIMITIVECORE_RM_LOWER_BOUND_I32_H PRIMITIVECORE_RM_LOWER_BOUND_I32_H
 #endif
-

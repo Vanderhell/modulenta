@@ -1,4 +1,4 @@
-#include "primitivecore/signal/measurements/bounded/pc_binary_centroid_accum_i32.h"
+#include "pc_binary_centroid_accum_i32.h"
 #include <limits.h>
 #include <stddef.h>
 

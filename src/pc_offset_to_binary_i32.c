@@ -1,4 +1,4 @@
-#include <primitivecore/encoding/codecs/binary/pc_offset_to_binary_i32.h>
+#include "pc_offset_to_binary_i32.h"
 #include <stddef.h>
 
 bool rm_offset_to_binary_i32(uint32_t code, uint32_t offset, int32_t *binary)

@@ -21,4 +21,3 @@ bool rm_table_validate_sorted_i32(const int32_t *values, size_t count);
 #ifndef PC_TABLE_VALIDATE_SORTED_I32_H
 #define PC_TABLE_VALIDATE_SORTED_I32_H RM_TABLE_VALIDATE_SORTED_I32_H
 #endif
-

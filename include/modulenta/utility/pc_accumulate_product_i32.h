@@ -16,4 +16,3 @@ bool rm_accumulate_product_i32(int32_t a, int32_t b, int64_t *accumulator);
 #ifndef PC_ACCUMULATE_PRODUCT_I32_H
 #define PC_ACCUMULATE_PRODUCT_I32_H RM_ACCUMULATE_PRODUCT_I32_H
 #endif
-

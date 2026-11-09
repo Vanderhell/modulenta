@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_lower_bound_i32.h>
+#include "pc_lower_bound_i32.h"
 #include <stddef.h>
 
 bool rm_lower_bound_i32(const int32_t *sorted, size_t count, int32_t value,

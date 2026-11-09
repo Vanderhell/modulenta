@@ -1,4 +1,4 @@
-#include "primitivecore/signal/measurements/bounded/pc_binary_majority3x3_u32.h"
+#include "pc_binary_majority3x3_u32.h"
 #include <stddef.h>
 
 bool pc_binary_majority3x3_u32(uint32_t neighborhood, uint32_t *result)

@@ -1,4 +1,4 @@
-#include "primitivecore/arithmetic/bounded/integer/pc_decimal_digit_count_u64.h"
+#include "pc_decimal_digit_count_u64.h"
 
 uint8_t pc_decimal_digit_count_u64(uint64_t value)
 {

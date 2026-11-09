@@ -1,4 +1,4 @@
-#include "primitivecore/signal/measurements/bounded/pc_binary_run_horizontal_u32.h"
+#include "pc_binary_run_horizontal_u32.h"
 #include <stddef.h>
 
 bool pc_binary_run_horizontal_u32(const uint8_t *row, uint32_t width,

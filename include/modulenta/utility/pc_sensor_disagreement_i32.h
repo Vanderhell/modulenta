@@ -16,4 +16,3 @@ bool rm_sensor_disagreement_i32(int32_t sensor0, int32_t sensor1, uint32_t *dist
 #ifndef PC_SENSOR_DISAGREEMENT_I32_H
 #define PC_SENSOR_DISAGREEMENT_I32_H RM_SENSOR_DISAGREEMENT_I32_H
 #endif
-

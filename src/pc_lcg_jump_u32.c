@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_lcg_jump_u32.h>
+#include "pc_lcg_jump_u32.h"
 
 uint32_t rm_lcg_jump_u32(uint32_t state, uint32_t multiplier, uint32_t increment, uint32_t steps)
 {

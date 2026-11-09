@@ -22,4 +22,3 @@ bool rm_calibrate_piecewise_i32(const rm_calibration_point_i32 *points,
 #ifndef PC_CALIBRATE_PIECEWISE_I32_H
 #define PC_CALIBRATE_PIECEWISE_I32_H RM_CALIBRATE_PIECEWISE_I32_H
 #endif
-

@@ -17,4 +17,3 @@ bool rm_round_robin_next_u32(uint32_t current, uint32_t count,
 #ifndef PC_PRIMITIVECORE_ROUND_ROBIN_NEXT_U32_H
 #define PC_PRIMITIVECORE_ROUND_ROBIN_NEXT_U32_H PRIMITIVECORE_ROUND_ROBIN_NEXT_U32_H
 #endif
-

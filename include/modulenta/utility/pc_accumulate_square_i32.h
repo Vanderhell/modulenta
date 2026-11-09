@@ -16,4 +16,3 @@ bool rm_accumulate_square_i32(int32_t value, uint64_t *accumulator);
 #ifndef PC_ACCUMULATE_SQUARE_I32_H
 #define PC_ACCUMULATE_SQUARE_I32_H RM_ACCUMULATE_SQUARE_I32_H
 #endif
-

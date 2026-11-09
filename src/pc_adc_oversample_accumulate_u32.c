@@ -1,4 +1,4 @@
-#include <primitivecore/arithmetic/integer/bounded/pc_adc_oversample_accumulate_u32.h>
+#include "pc_adc_oversample_accumulate_u32.h"
 #include <stddef.h>
 bool rm_adc_oversample_accumulate_u32(uint32_t sample, uint64_t *sum)
 {

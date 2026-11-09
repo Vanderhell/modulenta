@@ -17,4 +17,3 @@ bool rm_state_onehot_index_u32(uint32_t onehot_value, uint8_t *bit_index);
 #ifndef PC_PRIMITIVECORE_STATE_ONEHOT_INDEX_U32_H
 #define PC_PRIMITIVECORE_STATE_ONEHOT_INDEX_U32_H PRIMITIVECORE_STATE_ONEHOT_INDEX_U32_H
 #endif
-

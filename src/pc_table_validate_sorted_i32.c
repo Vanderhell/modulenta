@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_table_validate_sorted_i32.h>
+#include "pc_table_validate_sorted_i32.h"
 
 bool rm_table_validate_sorted_i32(const int32_t *values, size_t count)
 {

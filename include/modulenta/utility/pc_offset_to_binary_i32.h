@@ -20,4 +20,3 @@ bool rm_offset_to_binary_i32(uint32_t code, uint32_t offset, int32_t *binary);
 #ifndef PC_PRIMITIVECORE_OFFSET_TO_BINARY_I32_H
 #define PC_PRIMITIVECORE_OFFSET_TO_BINARY_I32_H PRIMITIVECORE_OFFSET_TO_BINARY_I32_H
 #endif
-

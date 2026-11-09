@@ -1,4 +1,4 @@
-#include <primitivecore/arithmetic/integer/bounded/pc_accumulate_square_i32.h>
+#include "pc_accumulate_square_i32.h"
 #include <stddef.h>
 
 bool rm_accumulate_square_i32(int32_t value, uint64_t *accumulator)
@@ -13,4 +13,3 @@ bool rm_accumulate_square_i32(int32_t value, uint64_t *accumulator)
     *accumulator += square;
     return true;
 }
-

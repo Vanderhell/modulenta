@@ -21,4 +21,3 @@ bool rm_counter_hysteretic_u32(bool sample, uint32_t lower, uint32_t upper,
 #ifndef PC_PRIMITIVECORE_COUNTER_HYSTERETIC_U32_H
 #define PC_PRIMITIVECORE_COUNTER_HYSTERETIC_U32_H PRIMITIVECORE_COUNTER_HYSTERETIC_U32_H
 #endif
-

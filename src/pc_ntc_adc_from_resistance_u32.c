@@ -1,4 +1,4 @@
-#include "primitivecore/fixed_point/conversion/q/pc_ntc_adc_from_resistance_u32.h"
+#include "pc_ntc_adc_from_resistance_u32.h"
 #include <stddef.h>
 
 static uint64_t divide_round_even_u64(uint64_t numerator, uint64_t denominator)

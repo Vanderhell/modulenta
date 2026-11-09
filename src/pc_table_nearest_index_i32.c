@@ -1,4 +1,4 @@
-#include <primitivecore/utility/general/bounded/pc_table_nearest_index_i32.h>
+#include "pc_table_nearest_index_i32.h"
 
 static uint32_t distance_i32(int32_t a, int32_t b)
 {

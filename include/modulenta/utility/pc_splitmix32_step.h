@@ -25,4 +25,3 @@ rm_splitmix32_step_result rm_splitmix32_step(uint32_t state);
 #ifndef PC_PRIMITIVECORE_SPLITMIX32_STEP_H
 #define PC_PRIMITIVECORE_SPLITMIX32_STEP_H PRIMITIVECORE_SPLITMIX32_STEP_H
 #endif
-

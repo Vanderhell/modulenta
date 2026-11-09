@@ -17,4 +17,3 @@ bool rm_state_onehot_encode_u32(uint8_t bit_index, uint32_t *onehot_value);
 #ifndef PC_PRIMITIVECORE_STATE_ONEHOT_ENCODE_U32_H
 #define PC_PRIMITIVECORE_STATE_ONEHOT_ENCODE_U32_H PRIMITIVECORE_STATE_ONEHOT_ENCODE_U32_H
 #endif
-

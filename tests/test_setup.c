@@ -24,4 +24,3 @@ int main(void) {
     if (pc_spi_cs_setup_ticks_u32(0u,1u,0)) return 7;
     return 0;
 }
-

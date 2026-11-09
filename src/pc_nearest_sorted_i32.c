@@ -1,5 +1,5 @@
-#include <primitivecore/utility/general/bounded/pc_nearest_sorted_i32.h>
-#include <primitivecore/utility/general/bounded/pc_lower_bound_i32.h>
+#include "pc_nearest_sorted_i32.h"
+#include "pc_lower_bound_i32.h"
 #include <stddef.h>
 
 static uint64_t distance_i32(int32_t a, int32_t b)
