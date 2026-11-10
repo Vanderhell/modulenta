@@ -14,7 +14,7 @@ The CMake test gate contains five executables. The nearest-table differential su
 | MSVC 19.42, strict warnings, Release | PASS, 5/5 |
 | GCC 13.3, AddressSanitizer + UndefinedBehaviorSanitizer | PASS, 5/5 |
 | ESP32-S3 v0.2, 240 MHz | PASS, all 44 calls completed on-device |
-| GitHub Actions for current changes | NOT RUN |
+| GitHub Actions commit `e70cd05` | PASS, all seven jobs ([run 42908355357](https://github.com/Vanderhell/modulenta/actions/runs/42908355357)) |
 
 Reproduce host validation with `cmake -S . -B build -DMODULENTA_BUILD_TESTS=ON -DMODULENTA_STRICT_WARNINGS=ON`, then build and run CTest. Sanitizers are run with GCC using `-fsanitize=address,undefined -fno-omit-frame-pointer`.
 
