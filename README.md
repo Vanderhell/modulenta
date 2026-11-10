@@ -1,4 +1,4 @@
-﻿# Modulenta
+# Modulenta
 ![CI](https://github.com/Vanderhell/modulenta/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg) ![Language](https://img.shields.io/badge/language-C99-informational.svg)
 
 ![Modulenta banner](docs/banner.svg)
@@ -44,7 +44,7 @@ The CMake test option is MODULENTA_BUILD_TESTS. The library has no mandatory thi
 
 ## Validation status
 
-4/4 enabled host tests passed; preserved out-of-boundary sources are not part of the gate.
+5/5 enabled host tests pass in checked GCC, Clang and MSVC configurations. The direct API suite exercises all 44 entries and passed on ESP32-S3 v0.2; the aggregate timing and whole-sketch size are documented with their limits in docs/PERFORMANCE.md.
 See docs/TESTING.md for reproducible commands, coverage boundaries and hardware status.
 
 Detailed overflow, rounding, invalid-input, memory-ownership and state rules are defined by the public headers and API reference. Do not infer them from the product name alone.

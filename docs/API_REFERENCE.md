@@ -1,4 +1,4 @@
-﻿# Modulenta API reference
+# Modulenta API reference
 
 This reference explains every public header in the Modulenta product. It is generated from the current headers and test sources; the header remains authoritative when a detail conflicts.
 
@@ -13,12 +13,9 @@ Each entry states the public symbol, implementation unit, contract, edge/failure
 
 **Purpose and contract:** Add a*b exactly to *accumulator; signed overflow leaves it unchanged.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -30,12 +27,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Add value squared to *accumulator; overflow leaves it unchanged.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -47,12 +41,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Add one ADC code to a caller-owned uint64 sum. Overflow/null fails atomically.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -64,12 +55,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Fill knot_count strictly increasing sample indices spanning [0, sample_count - 1], distributed by floor(i*(sample_count-1)/ (knot_count-1)). Requires 2 <= knot_count <= sample_count.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -81,12 +69,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Sum count terms start + i*step, i=0..count-1. Every term must fit int32. Returns exact int64 sum; count zero returns zero. False leaves sum unchanged.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -98,12 +83,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Zero-initialize; each update adds one foreground pixel coordinate. Sums/count encode the exact rational centroid; false leaves state unchanged.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -132,12 +114,9 @@ pc_binary_majority3x3_u32(m,&out\);
 
 **Purpose and contract:** Count consecutive nonzero row samples from start_x to the first zero or width. start_x==width returns zero. Invalid arguments preserve *run_length.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -149,12 +128,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Encode signed binary as code = binary + offset in uint32 range. False for a null output or unrepresentable code; failure writes nothing.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -166,12 +142,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Return the number of significant binary digits; zero has width zero.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -183,12 +156,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Reverse the eight byte positions in a uint64 value.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -200,12 +170,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Piecewise-linear map, clamp beyond endpoints, nearest/ties-away rounding. Count is 2..255; input knots must be strictly increasing.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -217,12 +184,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Exact four-neighbor discrete Laplacian: north+east+south+west-4*center. Returns an int64 result covering the full int32 input domain.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -234,12 +198,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Exact unweighted Moore-neighborhood Laplacian: sum(eight neighbors)-8*center.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -251,12 +212,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Integrate true samples up and false samples down; switch at separate thresholds.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -268,12 +226,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Return the number of base-10 digits; zero has one digit.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -285,12 +240,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Advance an LCG state by `steps` transitions of state = multiplier * state + increment modulo 2^32.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -302,12 +254,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** First index i with sorted[i] >= value, or count if none. Input must be nondecreasing. Null sorted is valid only for count==0; failure preserves out.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -319,12 +268,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Bitwise majority vote among three redundant uint32_t replicas. This is not a numerical median and does not report disagreement.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -336,12 +282,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Return floor((a+b)/2) without overflowing the uint64 domain.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -353,12 +296,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Find first x in inclusive [lo,hi] for which predicate(x,context) is true. Predicate must be deterministic and monotone false->true. Returns API success; found=false means no match. Invalid args preserve both outputs.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -372,10 +312,7 @@ No test-derived call was found.;
 
 **Validation source:** tests/test_existing_composition.c
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -387,12 +324,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Ratiometric divider: fixed resistor to excitation, NTC to ground, ADC at midpoint. adc_full_scale is maximum code (not 2^N). Output code is rounded nearest-even and may equal full-scale for a finite high resistance.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -404,12 +338,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Decode binary = code - offset when it fits int32_t. False for a null output or unrepresentable result; failure writes nothing.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -455,12 +386,9 @@ pc_opt_argmin_small_i32(values,(uint8_t)n,&index\);
 
 **Purpose and contract:** Advance a valid index in [0,count), wrapping to zero; reject invalid state.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -472,12 +400,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Exact absolute difference; UINT32_MAX is representable for opposite extremes.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -489,12 +414,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Minimum two's-complement bit count including sign; zero requires one bit.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -591,12 +513,9 @@ pc_sort8_i32(v\);
 
 **Purpose and contract:** Test overlap of two valid half-open spans; empty/overflowing spans do not overlap.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -608,12 +527,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Advance a 32-bit Weyl state and return its mixed output.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -625,12 +541,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Encode a bit index from 0 through 31 as a one-hot uint32 value.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -642,12 +555,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Return true iff exactly one bit is set; zero is not one-hot.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -659,12 +569,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** Return the index of the only set bit; reject zero and multi-bit values.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -676,12 +583,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** The public header contains the authoritative signature and input/output contract.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -710,12 +614,9 @@ pc_table_nearest_index_i32(values, n, query, &got\);
 
 **Purpose and contract:** Return true if values are nondecreasing; duplicates are allowed. An empty table is sorted and may use a null pointer.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -727,12 +628,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** The public header contains the authoritative signature and input/output contract.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 
@@ -744,12 +642,9 @@ No test-derived call was found.;
 
 **Purpose and contract:** The public header contains the authoritative signature and input/output contract.
 
-**Validation source:** No enabled test source was found by symbol search.
+**Validation source:** tests/test_all_public_api.c (direct boundary checks).
 
-**Test-derived call:**
-```c
-No test-derived call was found.;
-```
+**Test coverage:** boundary and contract assertions are in `tests/test_all_public_api.c`.
 
 **Integration notes:** use the exact fixed-width types and units shown in the declaration; check the boolean/status return before consuming an output pointer; do not assume overlap, rounding or overflow behavior beyond the contract above.
 

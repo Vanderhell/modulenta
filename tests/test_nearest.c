@@ -1,5 +1,8 @@
 #include "pc_table_nearest_index_i32.h"
 #include "pc_nearest_sorted_i32.h"
+#ifdef NDEBUG
+#undef NDEBUG /* Keep this test's assertions active in Release configurations. */
+#endif
 #include <assert.h>
 #include <limits.h>
 #include <stdint.h>

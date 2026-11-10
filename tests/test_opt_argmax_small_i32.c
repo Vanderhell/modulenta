@@ -1,4 +1,7 @@
 #include "pc_opt_argmax_small_i32.h"
+#ifdef NDEBUG
+#undef NDEBUG /* Keep this test's assertions active in Release configurations. */
+#endif
 #include <assert.h>
 #include <limits.h>
 #include <stddef.h>
